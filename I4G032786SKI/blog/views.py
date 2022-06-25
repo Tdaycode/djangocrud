@@ -1,4 +1,7 @@
 from msilib.schema import ListView
+from django.urls import reverse_lazy
+# from msilib.schema import CreateView
+from .models import Post
 from pyexpat import model
 from typing import List
 from django.shortcuts import render
@@ -22,4 +25,9 @@ class PostDetailView(DetailView):
 class PostUpdateView(UpdateView):
   model = Post
   fields = "__all__"
+  success_url = reverse_lazy("blog:all")
+
+
+class PostDeleteView(DeleteView):
+  model = Post
   success_url = reverse_lazy("blog:all")
