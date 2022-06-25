@@ -1,6 +1,9 @@
-from msilib.schema import ListView
+# from msilib.schema import ListView
 from django.urls import reverse_lazy
 # from msilib.schema import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView 
 from .models import Post
 from pyexpat import model
 from typing import List
